@@ -22,25 +22,24 @@ keyring::key_set("db_password")
 keyring::key_set("atlas_username")
 keyring::key_set("atlas_password")
 
-#4. Create the connection
-con =  DatabaseConnector::connect(
-  dbms = "redshift",
-  server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
-  port = 5439,
-  user = keyring::key_get("db_username"),
-  password = keyring::key_get("db_password"),
-  pathToDriver = "D:/Users/j.bradenday/Documents/R_projects/pmtx_connection_test/jdbc/redshift-jdbc42-2.1.0.32"
-)
+#4. Create the connection details
+connectionDetails <- createConnectionDetails(dbms = "redshift",
+                                             server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
+                                             port = 5439,
+                                             user = keyring::key_get("db_username"),
+                                             password = keyring::key_get("db_password"),
+                                             pathToDriver = "D:/Users/j.bradenday/Documents/jdbc_driver")
 
-#5. Make it easier for some r functions to find the database
+#5. Assign the schema and atlas information to easy-to-reference variables.
+atlas_url = "https://atlas.roux-ohdsi-prod.aws.northeastern.edu/WebAPI"
+synpuf_schema = "omop_cdm_synpuf_110k_531"
+write_schema = paste0("work_", keyring::key_get("db_username"))
+
+#6. Make it easier for some r functions to find the database
 options(con.default.value = con)
 options(schema.default.value = synpuf_schema)
 options(write_schema.default.value = write_schema)
 
-#6. Assign the schema and atlas information to easy-to-reference variables.
-atlas_url = "https://atlas.roux-ohdsi-prod.aws.northeastern.edu/WebAPI"
-synpuf_schema = "omop_cdm_synpuf_110k_531"
-write_schema = paste0("work_", keyring::key_get("db_username"))
 
 #7. Connect to ATLAS
 ROhdsiWebApi::authorizeWebApi(atlas_url, 
@@ -49,13 +48,13 @@ ROhdsiWebApi::authorizeWebApi(atlas_url,
                               webApiPassword = keyring::key_get("atlas_password"))
 
 #8. Identify the ATLAS cohort definition your want to use.
-cohortId <- 4669
+cohortId <- 4675
 
 #9. Pull the cohort definition from ATLAS
 cohortDefinitionSet <- ROhdsiWebApi::exportCohortDefinitionSet(baseUrl = atlas_url,
                                                                cohortIds = cohortId)
 #10. Name your cohort
-cohortTableNames <- getCohortTableNames(cohortTable = "synpuf4669")
+cohortTableNames <- getCohortTableNames(cohortTable = "synpuf4675")
 
 #11. Create empty tables in the white_schema cohort table
 createCohortTables(connectionDetails = connectionDetails,
@@ -69,15 +68,14 @@ cohortsGenerated <- generateCohortSet(connectionDetails = connectionDetails,
                                       cohortTableNames = cohortTableNames,
                                       cohortDefinitionSet = cohortDefinitionSet)
 
-#13. Connect to the database again
+#13. Connect to the database
 con =  DatabaseConnector::connect(
   dbms = "redshift",
   server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
   port = 5439,
   user = keyring::key_get("db_username"),
   password = keyring::key_get("db_password"),
-  pathToDriver = "D:/Users/j.bradenday/Documents/R_projects/pmtx_connection_test/jdbc/redshift-jdbc42-2.1.0.32"
-)
+  pathToDriver = "D:/Users/j.bradenday/Documents/jdbc_driver")
 
 #14. Filter person table for only the people in your cohort
 #14.1 pull data from your new cohort table
