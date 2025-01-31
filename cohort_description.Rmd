@@ -1,0 +1,37 @@
+---
+title: "cohort_description"
+output: html_document
+date: "2025-01-31"
+---
+
+# [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis
+## Cohort Entry Events
+People may enter the cohort when observing any of the following:
+
+1. condition occurrences of '[DEMO] Type 2 diabetes mellitus'.
+
+## Inclusion Criteria
+### 1. Metformin exposure within 30 days after type 2 diabetes diagnosis
+Entry events having at least 1 drug exposure of '[DEMO] Metformin', starting between 0 days before and 30 days after cohort entry start date.
+
+Limit qualifying entry events to the earliest event per person.
+
+## Cohort Exit
+The person exits the cohort at the end of continuous observation.
+
+## Cohort Eras
+Entry events will be combined into cohort eras if they are within 0 days of each other.
+
+
+## Appendix 1: Concept Set Definitions
+
+### [DEMO] Metformin
+Concept Id | Concept Name                               | Domain | Vocabulary | Excluded | Descendants | Mapped
+---------- | ------------------------------------------ | ------ | ---------- | -------- | ----------- | ------
+40164929   | metformin hydrochloride 500 MG Oral Tablet | Drug   | RxNorm     | NO       | No          | No     
+
+
+### [DEMO] Type 2 diabetes mellitus
+Concept Id | Concept Name             | Domain    | Vocabulary | Excluded | Descendants | Mapped
+---------- | ------------------------ | --------- | ---------- | -------- | ----------- | ------
+201826     | Type 2 diabetes mellitus | Condition | SNOMED     | NO       | YES         | No     
