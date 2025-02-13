@@ -1,0 +1,386 @@
+{
+  "getPlpDataArgs": {
+    "maxSampleSize": null,
+    "washoutPeriod": 0
+  },
+  "skeletonType": "PatientLevelPredictionStudy",
+  "populationSettings": [{
+    "minTimeAtRisk": 364,
+    "requireTimeAtRisk": true,
+    "addExposureDaysToStart": false,
+    "riskWindowStart": 1,
+    "washoutPeriod": 365,
+    "attr_class": "populationSettings",
+    "addExposureDaysToEnd": false,
+    "includeAllOutcomes": true,
+    "priorOutcomeLookback": 99999,
+    "binary": true,
+    "removeSubjectsWithPriorOutcome": false,
+    "riskWindowEnd": 365,
+    "firstExposureOnly": false
+  }],
+  "organizationName": "OHDSI",
+  "targetIds": [4675],
+  "runPlpArgs": {
+    "nfold": 3,
+    "minCovariateFraction": 0.001,
+    "splitSeed": null,
+    "testSplit": "person",
+    "testFraction": 0.25,
+    "normalizeData": true
+  },
+  "version": "v2.7.0",
+  "outcomeIds": [4681],
+  "skeletonVersion": "v0.0.1",
+  "conceptSetCrossReference": [],
+  "cohortDefinitions": [
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 319835,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "42343007",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Congestive heart failure",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "INVALID_REASON": "V"
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "[DEMO] Congestive heart failure",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "ConditionStatus": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": null,
+      "createdBy": null,
+      "name": "[DEMO] Congestive heart failure",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 4681
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 201826,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "44054006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Type 2 diabetes mellitus",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "[DEMO] Type 2 diabetes mellitus",
+            "id": 0
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 40164929,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "861007",
+                "VOCABULARY_ID": "RxNorm",
+                "CONCEPT_NAME": "metformin hydrochloride 500 MG Oral Tablet",
+                "DOMAIN_ID": "Drug",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Drug",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": false
+            }]},
+            "name": "[DEMO] Metformin",
+            "id": 3
+          }
+        ],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [{
+          "expression": {
+            "CriteriaList": [{
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": 0,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 30,
+                  "Coeff": 1
+                },
+                "UseIndexEnd": false
+              },
+              "IgnoreObservationPeriod": false,
+              "EndWindow": null,
+              "Criteria": {"DrugExposure": {
+                "OccurrenceEndDate": null,
+                "CorrelatedCriteria": null,
+                "DrugSourceConcept": null,
+                "CodesetId": 3,
+                "DrugTypeExclude": false,
+                "Quantity": null,
+                "DrugType": null,
+                "ProviderSpecialty": null,
+                "EffectiveDrugDose": null,
+                "Gender": null,
+                "DaysSupply": null,
+                "DoseUnit": null,
+                "VisitType": null,
+                "Refills": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "RouteConcept": null,
+                "StopReason": null,
+                "LotNumber": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 2,
+                "CountColumn": null,
+                "IsDistinct": false,
+                "Count": 1
+              }
+            }],
+            "Type": "ALL",
+            "DemographicCriteriaList": [],
+            "Groups": [],
+            "Count": null
+          },
+          "name": "Metformin exposure within 30 days after type 2 diabetes diagnosis",
+          "description": null
+        }],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "ConditionStatus": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": null,
+      "createdBy": null,
+      "name": "[DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis",
+      "modifiedDate": null,
+      "description": "\n",
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 4675
+    }
+  ],
+  "modelSettings": [{"RandomForestSettings": {
+    "maxDepth": [
+      4,
+      10,
+      17
+    ],
+    "varImp": [true],
+    "seed": null,
+    "mtries": [-1],
+    "ntrees": [500]
+  }}],
+  "name": "[JB] test plp",
+  "covariateSettings": [{
+    "VisitCountMediumTerm": false,
+    "ObservationShortTerm": true,
+    "shortTermStartDays": -30,
+    "MeasurementRangeGroupShortTerm": false,
+    "ConditionOccurrenceLongTerm": false,
+    "DrugEraStartLongTerm": false,
+    "VisitCountShortTerm": false,
+    "Chads2Vasc": true,
+    "ConditionGroupEraStartLongTerm": false,
+    "ConditionEraShortTerm": false,
+    "Dcsi": true,
+    "DrugGroupEraLongTerm": true,
+    "DrugGroupEraShortTerm": true,
+    "ConditionEraStartLongTerm": false,
+    "temporal": false,
+    "DemographicsIndexMonth": true,
+    "ConditionOccurrencePrimaryInpatientLongTerm": false,
+    "ConditionEraAnyTimePrior": false,
+    "addDescendantsToInclude": false,
+    "ConditionGroupEraStartMediumTerm": false,
+    "ProcedureOccurrenceLongTerm": true,
+    "DrugExposureLongTerm": false,
+    "DrugEraStartShortTerm": false,
+    "DistinctIngredientCountMediumTerm": false,
+    "DistinctMeasurementCountShortTerm": false,
+    "MeasurementRangeGroupLongTerm": true,
+    "ConditionGroupEraOverlapping": false,
+    "attr_fun": "getDbDefaultCovariateData",
+    "MeasurementRangeGroupMediumTerm": false,
+    "DrugGroupEraStartMediumTerm": false,
+    "MeasurementAnyTimePrior": false,
+    "MeasurementMediumTerm": false,
+    "includedCovariateIds": [],
+    "ConditionOccurrenceAnyTimePrior": false,
+    "DistinctConditionCountLongTerm": false,
+    "MeasurementValueLongTerm": false,
+    "DrugEraShortTerm": false,
+    "DrugGroupEraAnyTimePrior": false,
+    "DrugEraOverlapping": false,
+    "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+    "ConditionEraMediumTerm": false,
+    "ConditionEraOverlapping": false,
+    "ConditionEraStartShortTerm": false,
+    "ObservationAnyTimePrior": false,
+    "VisitConceptCountShortTerm": false,
+    "DemographicsEthnicity": true,
+    "DistinctIngredientCountLongTerm": false,
+    "ConditionOccurrencePrimaryInpatientShortTerm": false,
+    "DemographicsAgeGroup": true,
+    "DistinctProcedureCountShortTerm": false,
+    "DistinctObservationCountMediumTerm": false,
+    "includedCovariateConceptIds": [],
+    "DrugGroupEraStartShortTerm": false,
+    "addDescendantsToExclude": false,
+    "DrugEraLongTerm": false,
+    "DistinctConditionCountShortTerm": false,
+    "ConditionGroupEraShortTerm": true,
+    "ConditionEraStartMediumTerm": false,
+    "VisitCountLongTerm": false,
+    "DemographicsRace": true,
+    "ProcedureOccurrenceAnyTimePrior": false,
+    "DistinctObservationCountLongTerm": false,
+    "attr_class": "covariateSettings",
+    "ProcedureOccurrenceMediumTerm": false,
+    "CharlsonIndex": true,
+    "DemographicsPriorObservationTime": false,
+    "MeasurementShortTerm": true,
+    "DistinctProcedureCountMediumTerm": false,
+    "ConditionEraLongTerm": false,
+    "DrugGroupEraStartLongTerm": false,
+    "DemographicsGender": true,
+    "DeviceExposureAnyTimePrior": false,
+    "ObservationLongTerm": true,
+    "DemographicsIndexYearMonth": false,
+    "ConditionOccurrenceMediumTerm": false,
+    "longTermStartDays": -365,
+    "DemographicsAge": false,
+    "DrugGroupEraOverlapping": true,
+    "DistinctMeasurementCountLongTerm": false,
+    "MeasurementRangeGroupAnyTimePrior": false,
+    "DistinctConditionCountMediumTerm": false,
+    "DrugGroupEraMediumTerm": false,
+    "ProcedureOccurrenceShortTerm": true,
+    "ObservationMediumTerm": false,
+    "ConditionGroupEraAnyTimePrior": false,
+    "Chads2": true,
+    "DrugExposureAnyTimePrior": false,
+    "DeviceExposureLongTerm": true,
+    "DemographicsTimeInCohort": false,
+    "DistinctMeasurementCountMediumTerm": false,
+    "MeasurementValueShortTerm": false,
+    "DeviceExposureMediumTerm": false,
+    "ConditionGroupEraStartShortTerm": false,
+    "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+    "MeasurementLongTerm": true,
+    "DemographicsIndexYear": false,
+    "MeasurementValueMediumTerm": false,
+    "DrugEraStartMediumTerm": false,
+    "MeasurementValueAnyTimePrior": false,
+    "DistinctObservationCountShortTerm": false,
+    "DrugEraMediumTerm": false,
+    "ConditionGroupEraLongTerm": true,
+    "DrugExposureShortTerm": false,
+    "DistinctIngredientCountShortTerm": false,
+    "DeviceExposureShortTerm": true,
+    "mediumTermStartDays": -180,
+    "DemographicsPostObservationTime": false,
+    "VisitConceptCountLongTerm": false,
+    "VisitConceptCountMediumTerm": false,
+    "excludedCovariateConceptIds": [],
+    "ConditionGroupEraMediumTerm": false,
+    "DrugExposureMediumTerm": false,
+    "DistinctProcedureCountLongTerm": false,
+    "DrugEraAnyTimePrior": false,
+    "endDays": 0,
+    "ConditionOccurrenceShortTerm": false
+  }],
+  "conceptSets": [],
+  "id": 34,
+  "packageName": "test"
+}

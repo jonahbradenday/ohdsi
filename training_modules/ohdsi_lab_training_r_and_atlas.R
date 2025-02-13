@@ -35,7 +35,7 @@ synpuf_schema = "omop_cdm_synpuf_110k_531"
 write_schema = paste0("work_", keyring::key_get("db_username"))
 
 #6. Make it easier for some r functions to find the database
-options(con.default.value = con)
+options(con.default.value = connectionDetails)
 options(schema.default.value = synpuf_schema)
 options(write_schema.default.value = write_schema)
 

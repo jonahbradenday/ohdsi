@@ -1,0 +1,521 @@
+2025-02-06 19:50:52	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 19:50:52	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 19:50:54	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.54secs
+2025-02-06 19:50:56	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 19:50:58	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 19:50:58	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 19:52:07	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.14 mins
+2025-02-06 19:52:07	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 19:52:52	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 44.2 secs
+2025-02-06 19:52:52	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 19:52:57	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 5.34 secs
+2025-02-06 19:52:57	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 19:52:57	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 19:54:19	[Main thread]	INFO	utils	install.packages	Installing package into ‘D:/Users/j.bradenday/AppData/Local/R/cache/R/renv/library/prediction_study_34_export-201867de/R-4.3/x86_64-w64-mingw32’ (as ‘lib’ is unspecified) 
+2025-02-06 19:54:20	[Main thread]	INFO	utils	getDependencies	also installing the dependencies ‘RcppTOML’, ‘here’, ‘png’  
+2025-02-06 19:54:32	[Main thread]	FATAL	PatientLevelPrediction	3	scikit-learn in a python environment reachable by reticulate is required to use the Python models
+2025-02-06 19:59:25	[Main thread]	FATAL	PatientLevelPrediction	viewMultiplePlp	No database found
+2025-02-06 20:12:01	[Main thread]	WARN			package ‘reticulate’ was built under R version 4.3.3
+2025-02-06 20:12:01	[Main thread]	FATAL			unused argument (conda = FALSE)
+2025-02-06 20:12:11	[Main thread]	FATAL	reticulate	use_python	invalid 'x' type in 'x && y'
+2025-02-06 20:12:49	[Main thread]	FATAL	reticulate	use_python	Specified version of python '/usr/bin/python3' does not exist.
+2025-02-06 20:14:09	[Main thread]	FATAL	reticulate	use_python	Specified version of python '/usr/bin/python3' does not exist.
+2025-02-06 20:15:22	[Main thread]	FATAL	reticulate	use_python	Specified version of python '/usr/bin.python3' does not exist.
+2025-02-06 20:15:49	[Main thread]	FATAL	reticulate	use_python	Specified version of python 'usr/bin.python3' does not exist.
+2025-02-06 20:16:58	[Main thread]	FATAL			'\u' used without hex digits in character string (<input>:1:27)
+2025-02-06 20:17:12	[Main thread]	FATAL	reticulate	use_python	Specified version of python '//wsl$/Ubuntu/usr/bin/python3' does not exist.
+2025-02-06 20:18:20	[Main thread]	FATAL	reticulate	use_python	Specified version of python 'C:/Windows/System32/wsl.exe /usr/bin/python3' does not exist.
+2025-02-06 20:19:54	[Main thread]	FATAL	reticulate	use_python	Specified version of python 'D:/Users/j.bradenday/WSL/Ubuntu/Ubuntu_2204.1.7.0_x64/ubuntu.exe /usr/bin/python3' does not exist.
+2025-02-06 20:20:36	[Main thread]	FATAL	reticulate	use_python	Specified version of python 'C:/Windows/System32/wsl.exe /usr/bin/python3' does not exist.
+2025-02-06 20:36:04	[Main thread]	FATAL	reticulate	use_python	Specified version of python '/usr/bin/python3' does not exist.
+2025-02-06 20:37:22	[Main thread]	FATAL	reticulate	use_python	Specified version of python '/usr/bin/python3' does not exist.
+2025-02-06 20:41:42	[Main thread]	FATAL			'\U' used without hex digits in character string (<input>:1:19)
+2025-02-06 20:41:57	[Main thread]	FATAL	reticulate	use_condaenv	Unable to find conda binary. Is Anaconda installed?
+2025-02-06 20:43:25	[Main thread]	INFO	reticulate	system2t	+ "D:/Users/j.bradenday/AppData/Local/anaconda3/condabin/conda.bat" install --yes --prefix "D:/Users/j.bradenday/AppData/Local/anaconda3" -c conda-forge scikit-learn 
+2025-02-06 20:57:18	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 20:57:18	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 20:57:18	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 20:57:18	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.72secs
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.72secs
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 20:57:19	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 20:57:21	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 20:57:21	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 20:57:21	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 20:57:21	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 20:57:23	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.84 secs
+2025-02-06 20:57:23	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.84 secs
+2025-02-06 20:57:23	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 20:57:23	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 20:57:25	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 2.58 secs
+2025-02-06 20:57:25	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 2.58 secs
+2025-02-06 20:57:25	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 20:57:25	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 20:57:27	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.49 secs
+2025-02-06 20:57:27	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.49 secs
+2025-02-06 20:57:27	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 20:57:27	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 20:57:27	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 20:57:27	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 20:57:54	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 20:57:54	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 20:57:54	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 90251, 3))
+2025-02-06 20:57:54	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 90251, 3))
+2025-02-06 21:03:50	[Main thread]	FATAL			unused argument (splitSettings = splitSettings)
+2025-02-06 21:03:50	[Main thread]	FATAL			unused argument (splitSettings = splitSettings)
+2025-02-06 21:04:30	[Main thread]	FATAL			unused argument (splitSettings = splitSettings)
+2025-02-06 21:04:30	[Main thread]	FATAL			unused argument (splitSettings = splitSettings)
+2025-02-06 21:04:59	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:04:59	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:04:59	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:04:59	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:04:59	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:04:59	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.88secs
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.88secs
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.88secs
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:05:01	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:05:03	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:05:03	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:05:03	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:05:03	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:05:03	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:05:03	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:05:04	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.4 secs
+2025-02-06 21:05:04	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.4 secs
+2025-02-06 21:05:04	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.4 secs
+2025-02-06 21:05:04	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:05:04	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:05:04	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:05:06	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.98 secs
+2025-02-06 21:05:06	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.98 secs
+2025-02-06 21:05:06	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.98 secs
+2025-02-06 21:05:06	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:05:06	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:05:06	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:05:08	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.22 secs
+2025-02-06 21:05:08	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.22 secs
+2025-02-06 21:05:08	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.22 secs
+2025-02-06 21:05:08	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:05:08	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:05:08	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:05:08	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:05:08	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:05:08	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:05:08	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:05:08	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:05:08	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:05:08	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 9975, 3))
+2025-02-06 21:05:08	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 9975, 3))
+2025-02-06 21:05:08	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 9975, 3))
+2025-02-06 21:10:25	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:10:25	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:10:25	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:10:25	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:10:25	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:10:25	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:10:25	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:10:25	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:10:25	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:10:25	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:10:25	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:10:25	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.08secs
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.08secs
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.08secs
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.08secs
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:10:26	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:10:27	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:10:27	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:10:27	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:10:27	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:10:27	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:10:27	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:10:27	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:10:27	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:10:28	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.35 secs
+2025-02-06 21:10:28	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.35 secs
+2025-02-06 21:10:28	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.35 secs
+2025-02-06 21:10:28	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.35 secs
+2025-02-06 21:10:28	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:10:28	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:10:28	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:10:28	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:10:30	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.47 secs
+2025-02-06 21:10:30	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.47 secs
+2025-02-06 21:10:30	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.47 secs
+2025-02-06 21:10:30	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.47 secs
+2025-02-06 21:10:30	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:10:30	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:10:30	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:10:30	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:10:31	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:10:31	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:10:31	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:10:31	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:10:31	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:10:31	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:10:31	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:10:31	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:10:31	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:10:31	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 15501, 3))
+2025-02-06 21:10:31	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 15501, 3))
+2025-02-06 21:10:31	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 15501, 3))
+2025-02-06 21:10:31	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 15501, 3))
+2025-02-06 21:13:15	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:13:15	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:13:15	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:13:15	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:13:15	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:13:15	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:13:15	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:13:15	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:13:15	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:13:15	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:13:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:13:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:13:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:13:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:13:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1secs
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1secs
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1secs
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1secs
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1secs
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:13:16	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:13:17	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:13:17	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:13:17	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:13:17	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:13:17	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:13:17	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:13:17	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:13:17	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:13:17	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:13:17	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:13:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.42 secs
+2025-02-06 21:13:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.42 secs
+2025-02-06 21:13:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.42 secs
+2025-02-06 21:13:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.42 secs
+2025-02-06 21:13:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.42 secs
+2025-02-06 21:13:19	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:13:19	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:13:19	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:13:19	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:13:19	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:13:21	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.74 secs
+2025-02-06 21:13:21	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.74 secs
+2025-02-06 21:13:21	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.74 secs
+2025-02-06 21:13:21	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.74 secs
+2025-02-06 21:13:21	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.74 secs
+2025-02-06 21:13:21	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:13:21	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:13:21	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:13:21	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:13:21	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:13:22	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:13:22	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:13:22	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:13:22	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:13:22	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.23 secs
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:13:22	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:13:22	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:13:22	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:13:22	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:13:22	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:13:22	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:13:22	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 35993, 3))
+2025-02-06 21:13:22	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 35993, 3))
+2025-02-06 21:13:22	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 35993, 3))
+2025-02-06 21:13:22	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 35993, 3))
+2025-02-06 21:13:22	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 35993, 3))
+2025-02-06 21:17:29	[Main thread]	FATAL	PatientLevelPrediction	checkIsClass	object 'covariateSettings' not found
+2025-02-06 21:17:29	[Main thread]	FATAL	PatientLevelPrediction	checkIsClass	object 'covariateSettings' not found
+2025-02-06 21:17:29	[Main thread]	FATAL	PatientLevelPrediction	checkIsClass	object 'covariateSettings' not found
+2025-02-06 21:17:29	[Main thread]	FATAL	PatientLevelPrediction	checkIsClass	object 'covariateSettings' not found
+2025-02-06 21:17:29	[Main thread]	FATAL	PatientLevelPrediction	checkIsClass	object 'covariateSettings' not found
+2025-02-06 21:22:37	[Main thread]	FATAL			object 'runPlpArgs' not found
+2025-02-06 21:22:37	[Main thread]	FATAL			object 'runPlpArgs' not found
+2025-02-06 21:22:37	[Main thread]	FATAL			object 'runPlpArgs' not found
+2025-02-06 21:22:37	[Main thread]	FATAL			object 'runPlpArgs' not found
+2025-02-06 21:22:37	[Main thread]	FATAL			object 'runPlpArgs' not found
+2025-02-06 21:27:45	[Main thread]	FATAL	PatientLevelPrediction	viewMultiplePlp	No database found
+2025-02-06 21:27:45	[Main thread]	FATAL	PatientLevelPrediction	viewMultiplePlp	No database found
+2025-02-06 21:27:45	[Main thread]	FATAL	PatientLevelPrediction	viewMultiplePlp	No database found
+2025-02-06 21:27:45	[Main thread]	FATAL	PatientLevelPrediction	viewMultiplePlp	No database found
+2025-02-06 21:27:45	[Main thread]	FATAL	PatientLevelPrediction	viewMultiplePlp	No database found
+2025-02-06 21:28:14	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:28:14	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:28:14	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:28:14	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:28:14	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:28:14	[Main thread]	INFO	test	execute	Creating cohorts
+2025-02-06 21:28:14	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:28:14	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:28:14	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:28:14	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:28:14	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:28:14	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-02-06 21:28:14	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:28:14	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:28:14	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:28:14	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:28:14	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:28:14	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_result
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_inclusion_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_summary_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table work_j_bradenday223.testCohort_censor_stats
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.87secs
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.87secs
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.87secs
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.87secs
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.87secs
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.87secs
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:28:15	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2025-02-06 21:28:16	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:28:16	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:28:16	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:28:16	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:28:16	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:28:16	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-02-06 21:28:16	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:28:16	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:28:16	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:28:16	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:28:16	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:28:16	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [DEMO] Congestive heart failure (id = 4681)
+2025-02-06 21:28:17	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.26 secs
+2025-02-06 21:28:17	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.26 secs
+2025-02-06 21:28:17	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.26 secs
+2025-02-06 21:28:17	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.26 secs
+2025-02-06 21:28:17	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.26 secs
+2025-02-06 21:28:17	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.26 secs
+2025-02-06 21:28:17	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:28:17	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:28:17	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:28:17	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:28:17	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:28:17	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [DEMO] Type 2 diabetes patients prescribed metformin within 30 days after type 2 diabetes diagnosis (id = 4675)
+2025-02-06 21:28:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.52 secs
+2025-02-06 21:28:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.52 secs
+2025-02-06 21:28:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.52 secs
+2025-02-06 21:28:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.52 secs
+2025-02-06 21:28:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.52 secs
+2025-02-06 21:28:19	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.52 secs
+2025-02-06 21:28:19	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:28:19	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:28:19	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:28:19	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:28:19	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:28:19	[Main thread]	INFO	test	createCohorts	Counting cohorts 
+2025-02-06 21:28:20	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.18 secs
+2025-02-06 21:28:20	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.18 secs
+2025-02-06 21:28:20	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.18 secs
+2025-02-06 21:28:20	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.18 secs
+2025-02-06 21:28:20	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.18 secs
+2025-02-06 21:28:20	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 1.18 secs
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Running predictions
+2025-02-06 21:28:20	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:28:20	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:28:20	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:28:20	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:28:20	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:28:20	[Main thread]	WARN	test	backwards	Using backwards compatible json - only default hyper-parameters can be used
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:28:20	[Main thread]	INFO	test	execute	Updating as cohort covariate settings is being used
+2025-02-06 21:28:20	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 1573, 3))
+2025-02-06 21:28:20	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 1573, 3))
+2025-02-06 21:28:20	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 1573, 3))
+2025-02-06 21:28:20	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 1573, 3))
+2025-02-06 21:28:20	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 1573, 3))
+2025-02-06 21:28:20	[Main thread]	FATAL	test	execute	unused argument (splitSettings = list(0.25, 0.75, 1573, 3))
