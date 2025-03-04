@@ -1,0 +1,6 @@
+2025-03-03 10:08:08	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-03-03 10:08:10	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.266 secs
+2025-03-03 10:08:10	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.477 secs
+2025-03-03 10:08:28	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 12.9 secs
+2025-03-03 10:08:29	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0367 secs
+2025-03-03 10:08:39	[Main thread]	INFO	CohortExplorer	createCohortExplorerApp	The CohortExplorer shiny app has been created at 'D:\Users\j.bradenday\Documents\R Projects\ohdsi\cohortexplorer'.                      Please view the README file in that folder for instructions                      on how to run. 

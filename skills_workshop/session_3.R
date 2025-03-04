@@ -23,12 +23,14 @@ keyring::key_set("atlas_password")
 
 #4. Create the connection details. These details will be used as arguments in 
 #later functions.
+
+Sys.setenv("DATABASECONNECTOR_JAR_FOLDER" = "D:/Users/j.bradenday/Documents/jdbc_driver")
+
 connectionDetails <- createConnectionDetails(dbms = "redshift",
                                              server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
                                              port = 5439,
                                              user = keyring::key_get("db_username"),
-                                             password = keyring::key_get("db_password"),
-                                             pathToDriver = "D:/Users/j.bradenday/Documents/jdbc_driver")
+                                             password = keyring::key_get("db_password"))
 
 #5. Assign variables to the atlas url, the synpuf database schema and your 
 #personal schema.
@@ -43,8 +45,7 @@ con =  DatabaseConnector::connect(
   server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
   port = 5439,
   user = keyring::key_get("db_username"),
-  password = keyring::key_get("db_password"),
-  pathToDriver = "D:/Users/j.bradenday/Documents/jdbc_driver")
+  password = keyring::key_get("db_password"))
 
 #7. Make it easier for some r functions to find the database
 options(con.default.value = con)
@@ -64,7 +65,7 @@ cohortId <- 4675
 #10. Pull the cohort definition from ATLAS
 cohortDefinitionSet <- ROhdsiWebApi::exportCohortDefinitionSet(baseUrl = atlas_url,
                                                                cohortIds = cohortId)
-#11. Set a naming convetion for the cohort tables.
+#11. Set a naming convention for the cohort tables.
 cohortTableNames <- getCohortTableNames(cohortTable = "synpuf4675")
 
 #12. Create empty tables in your personal schema using the naming convention
@@ -86,8 +87,7 @@ con =  DatabaseConnector::connect(
   server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
   port = 5439,
   user = keyring::key_get("db_username"),
-  password = keyring::key_get("db_password"),
-  pathToDriver = "D:/Users/j.bradenday/Documents/jdbc_driver")
+  password = keyring::key_get("db_password"))
 
 #15. Because you reran "con" you will have to set the following option again.
 options(con.default.value = con)
