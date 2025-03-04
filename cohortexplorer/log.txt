@@ -1,0 +1,10 @@
+2025-03-03 14:13:48	[Main thread]	INFO	DatabaseConnector	connectRedShift	Connecting using Redshift driver
+2025-03-03 14:13:49	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.132 secs
+2025-03-03 14:13:49	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0868 secs
+2025-03-03 14:13:58	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 6.6 secs
+2025-03-03 14:13:58	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0334 secs
+2025-03-03 14:13:59	[Main thread]	INFO	CohortExplorer	createCohortExplorerApp	The CohortExplorer shiny app has been created at 'D:\Users\j.bradenday\Documents\R Projects\ohdsi\cohortexplorer'.                      Please view the README file in that folder for instructions                      on how to run. 
+2025-03-03 14:41:26	[Main thread]	INFO	cli	clii__message	-- Installing package [34mohdsilab[39m into temporary library -------------------------------------------- 
+2025-03-03 14:41:26	[Main thread]	WARN	utils	install.packages	package ‘ohdsilab’ is in use and will not be installed
+2025-03-03 14:43:50	[Main thread]	INFO	cli	clii__message	-- Finished building pkgdown site for package [34mohdsilab[39m ------------------------------------------- 
+2025-03-03 14:43:50	[Main thread]	INFO	cli	cli_inform	[38;5;232m[36mi[38;5;232m Previewing site[39m
