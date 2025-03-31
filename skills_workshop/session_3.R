@@ -40,12 +40,7 @@ write_schema = paste0("work_", keyring::key_get("db_username"))
 
 #6. Connect to the database. You will do this again later, but for now you just 
 #need the "con" information saved for the next step.
-con =  DatabaseConnector::connect(
-  dbms = "redshift",
-  server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
-  port = 5439,
-  user = keyring::key_get("db_username"),
-  password = keyring::key_get("db_password"))
+con =  DatabaseConnector::connect(connectionDetails)
 
 #7. Make it easier for some r functions to find the database
 options(con.default.value = con)

@@ -1,13 +1,70 @@
 DBMS:
-redshift
+postgresql
 
 Error:
-com.amazon.redshift.util.RedshiftException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "xpk_person"
+  Detail: Key (person_id)=(1) already exists.
 
 SQL:
-SELECT *
-FROM omop_cdm_synpuf_110k_531.person q06
-WHERE (0 = 1);
+insert into texas1000.person (
+person_id,
+gender_concept_id,
+year_of_birth,
+month_of_birth,
+day_of_birth,
+birth_datetime,
+race_concept_id,
+ethnicity_concept_id,
+location_id,
+provider_id,
+care_site_id,
+person_source_value,
+gender_source_value,
+gender_source_concept_id,
+race_source_value,
+race_source_concept_id,
+ethnicity_source_value,
+ethnicity_source_concept_id
+)
+with mapped_states as (
+	select distinct l.location_id,l.city,states_map.state,l.zip
+	from texas1000.location l
+	left join texas1000.states_map states_map on l.state=states_map.state_abbreviation
+)
+select
+	row_number()over(order by p.id),
+	case upper(p.gender)
+		when 'M' then 8507
+		when 'F' then 8532
+	end,
+	EXTRACT(YEAR FROM p.birthdate),
+	EXTRACT(MONTH FROM p.birthdate),
+	EXTRACT(DAY FROM p.birthdate),
+	p.birthdate,
+	case upper(p.race)
+		when 'WHITE' then 8527
+		when 'BLACK' then 8516
+		when 'ASIAN' then 8515
+	else 0
+	end,
+    case
+      when Upper(p.ethnicity) = 'HISPANIC' then 38003563
+      when Upper(p.ethnicity) = 'NONHISPANIC' then 38003564
+      else 0
+    end,
+	l.location_id,
+	NULL,
+	NULL,
+	p.id,
+	p.gender,
+	0,
+	p.race,
+	0,
+	p.ethnicity,
+	0
+	from native.patients p
+	left join mapped_states l on p.city = l.city and p.state=l.state and p.zip=l.zip
+	where p.gender is not null
 
 R version:
 R version 4.4.2 (2024-10-31 ucrt)
@@ -25,20 +82,4 @@ Attached base packages:
 - base
 
 Other attached packages:
-- gt (0.11.1)
-- CohortGenerator (0.11.2)
-- R6 (2.6.0)
-- ROhdsiWebApi (1.3.3)
-- keyring (1.3.2)
-- DatabaseConnector (6.4.0)
-- lubridate (1.9.4)
-- forcats (1.0.0)
-- stringr (1.5.1)
-- dplyr (1.1.4)
-- purrr (1.0.4)
-- readr (2.1.5)
-- tidyr (1.3.1)
-- tibble (3.2.1)
-- ggplot2 (3.5.1)
-- tidyverse (2.0.0)
-- ohdsilab (0.1.0)
+- ETLSyntheaBuilder (2.1)
