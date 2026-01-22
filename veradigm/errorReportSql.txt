@@ -1,0 +1,35 @@
+DBMS:
+postgresql
+
+Error:
+org.postgresql.util.PSQLException: ERROR: relation "cohort2" already exists
+
+SQL:
+CREATE TABLE scratch.cohort2 AS
+           SELECT DISTINCT c.patient, c.start AS cohort_start_date
+           FROM public.conditions c
+           INNER Join public.medications m
+            ON c.patient = m.patient
+           WHERE c.code = '40055000'
+            AND m.code = '309362'
+            AND m.start > '2001-11-05'
+
+R version:
+R version 4.5.1 (2025-06-13)
+
+Platform:
+aarch64-apple-darwin20
+
+Attached base packages:
+- stats
+- graphics
+- grDevices
+- utils
+- datasets
+- methods
+- base
+
+Other attached packages:
+- dplyr (1.1.4)
+- keyring (1.4.1)
+- DatabaseConnector (7.1.0)
