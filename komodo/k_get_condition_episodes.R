@@ -65,27 +65,6 @@ k_get_condition_events <- function(connection,
     paste(filters, collapse = " OR ")
   }
   
-  # --- Helper: conditions for array columns ---
-  create_array_filter <- function(codes, alias, array_col) {
-    exact <- codes[!grepl("%", codes)]
-    like  <- codes[grepl("%", codes)]
-    
-    filters <- c()
-    if (length(exact) > 0) {
-      for (code in exact) {
-        filters <- c(filters, paste0("'", code, "' = ANY(", alias, ".", array_col, ")"))
-      }
-    }
-    if (length(like) > 0) {
-      for (code in like) {
-        filters <- c(filters,
-                        paste0("EXISTS (SELECT 1 FROM unnest(", alias, ".", array_col, ") AS x WHERE x LIKE '", code, "')")
-        )
-      }
-    }
-    paste(filters, collapse = " OR ")
-  }
-  
   # --- Build SQL ---
   # Note: no DROP/CREATE — this is a lazy query, not a materialized table
   sql <- paste0("
@@ -93,14 +72,14 @@ k_get_condition_events <- function(connection,
     FROM ", komodo_schema, ".inpatient_events i
     WHERE ", create_code_filter(codes, "i", "admission_diagnosis_code"), "
        OR ", create_code_filter(codes, "i", "primary_diagnosis_code"), "
-       OR ", create_array_filter(codes, "i", "secondary_diagnosis_codes"), "
+       OR ", create_code_filter(codes, "i", "secondary_diagnosis_codes"), "
     
     UNION ALL
     
     SELECT patient_id, service_date AS diagnosis_date
     FROM ", komodo_schema, ".non_inpatient_events n
-    WHERE ", create_array_filter(codes, "n", "diagnosis_codes"), "
-       OR ", create_array_filter(codes, "n", "primary_diagnosis_code_array"), "
+    WHERE ", create_code_filter(codes, "n", "diagnosis_codes"), "
+       OR ", create_code_filter(codes, "n", "primary_diagnosis_code_array"), "
   ")
   
   # Return as lazy table — no execution happens here
