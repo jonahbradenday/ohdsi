@@ -139,18 +139,16 @@ komodo_table1 <- function(
   procedure_lookup <- tbl(con, inDatabaseSchema(komodo_schema, "procedure_lookup"))
   
   # Union all procedure fields/values into a single long table of patient_id, procedure_code
-  # Inpatient: two array fields
-  # Non Inpatient: one string field, one array field
+  # Inpatient: two string fields
+  # Non Inpatient: two string fields
   all_procedures <- dplyr::tbl(con, dplyr::sql(paste0("
-    SELECT patient_id, x AS procedure_code
-    FROM ", komodo_schema, ".inpatient_events,
-    unnest(icd_pcs_codes) AS x
+    SELECT patient_id, icd_pcs_codes AS procedure_code
+    FROM ", komodo_schema, ".inpatient_events
 
     UNION ALL
 
-    SELECT patient_id, x AS procedure_code
-    FROM ", komodo_schema, ".inpatient_events,
-    unnest(cpt_hcpcs_codes) AS x
+    SELECT patient_id, cpt_hcpcs_codes AS procedure_code
+    FROM ", komodo_schema, ".inpatient_events
 
     UNION ALL
 
@@ -159,9 +157,8 @@ komodo_table1 <- function(
 
     UNION ALL
 
-    SELECT patient_id, x AS procedure_code
-    FROM ", komodo_schema, ".non_inpatient_events,
-    unnest(icd_pcs_codes) AS x
+    SELECT patient_id, icd_pcs_codes AS procedure_code
+    FROM ", komodo_schema, ".non_inpatient_events
   ")))
   
   # Filter to cohort population, join to procedure lookup table, create procedure summary
@@ -184,34 +181,31 @@ komodo_table1 <- function(
   condition_lookup <- tbl(con, inDatabaseSchema(komodo_schema, "condition_lookup"))
   
   # Union all diagnosis sources into a single long table of patient_id, icd_code
-  # Inpatient: two string fields, one array field
-  # Non-inpatient: two array fields
+  # Inpatient: three string fields
+  # Non-inpatient: two string fields (field names are legacy, not arrays)
   all_diagnoses <- dplyr::tbl(con, dplyr::sql(paste0("
     SELECT patient_id, admission_diagnosis_code AS icd_code
     FROM ", komodo_schema, ".inpatient_events
-    
+
     UNION ALL
-    
+
     SELECT patient_id, primary_diagnosis_code AS icd_code
     FROM ", komodo_schema, ".inpatient_events
-    
+
     UNION ALL
-    
-    SELECT patient_id, x AS icd_code
-    FROM ", komodo_schema, ".inpatient_events,
-    unnest(secondary_diagnosis_codes) AS x
-    
+
+    SELECT patient_id, secondary_diagnosis_codes AS icd_code
+    FROM ", komodo_schema, ".inpatient_events
+
     UNION ALL
-    
-    SELECT patient_id, x AS icd_code
-    FROM ", komodo_schema, ".non_inpatient_events,
-    unnest(diagnosis_codes) AS x
-    
+
+    SELECT patient_id, diagnosis_codes AS icd_code
+    FROM ", komodo_schema, ".non_inpatient_events
+
     UNION ALL
-    
-    SELECT patient_id, x AS icd_code
-    FROM ", komodo_schema, ".non_inpatient_events,
-    unnest(primary_diagnosis_code_array) AS x
+
+    SELECT patient_id, primary_diagnosis_code_array AS icd_code
+    FROM ", komodo_schema, ".non_inpatient_events
   ")))
   
   # Filter to cohort population, join to lookup table, create condition summary
